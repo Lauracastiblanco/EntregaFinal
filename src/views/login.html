@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="title"> Login Form</div>
+        <form action="#">
+            <div class="field">
+                <input type="text" name="empUsuario" placeholder="Enter Username">
+                <label>User Name</label>
+            </div>
+            <div class="field">
+                <input type="password" name="empContraseña" placeholder="Password">
+                <label>Password</label>
+            </div>
+            <div class="pass-link"><a href="#">Forgot Password?</a></div>
+            <div class="field">
+                <input type="submit" value="Login">
+            </div>
+            <div class="signup-link">Don't have an account?<a href="#">Sign Up</a></div>
+        </form>
+        {{#if error}}
+        <p>{{error}}</p>
+        {{/if}}
+    </div>
+</body>
+</html>

@@ -1,0 +1,120 @@
+ <style>
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'Poppins', sans-serif;
+}
+main{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background: linear-gradient(-135deg, #8dc2e6, #516bd6);
+}
+.container{
+    max-width: 700px;
+    width: 100%;
+    background: #fff;
+    padding: 25px 30px;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+}
+.container.title{
+    font-size: 25px;
+    font-weight: 500;
+    position: relative;
+}
+
+.container form .user-details{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 0 12px 0; 
+}
+form .user-details .input-box{
+    margin-bottom: 15px;
+    width: calc(100% / 2 - 20px);
+}
+form .input-box span.user-details{
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+.user-details .input-box input{
+    height: 45px;
+    width: 100%;
+    outline: none;
+    font-size: 16px;
+    border-radius: 5px;
+    padding-left: 15px;
+    border: 1px solid #ccc;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+}
+.user-details .input-box input:focus, 
+.user-details .input-box input:valid{
+    border-color:#5254db9c;
+}
+form .button input{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    color: #fff;
+    border: none;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    border-radius: 5px;
+    background: linear-gradient(-135deg, #8dc2e6, #516bd6);
+
+}
+ </style>
+ <main>
+ <div class="container">
+        <div class="title">Registration</div>
+        <form action="" method="post">
+            <div class="user-details">
+                <div class="input-box">
+                    <span class="details">Document: </span>
+                    <input type="text" name= "empDocumento" placeholder="Enter your Document" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Name</span>
+                    <input type="text" name= "empNombre" placeholder="Enter your Name" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Lastname</span>
+                    <input type="text" name= "empApellido" placeholder="Enter your lastname " required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Usuario</span>
+                    <input type="text" name= "empUsuario"placeholder="Enter your User" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Password</span>
+                    <input type="password" name="empContraseña" placeholder="Enter your password" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Genrer</span>
+                    <input type="text" name = "empSexo" placeholder="Enter your genrer" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Date of birth</span>
+                    <input type="Date" name= "empFechaNacimiento" placeholder="Enter your date of birth" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">Phone Number</span>
+                    <input type="text" name= "empCelular"placeholder="Enter your phone number" required>
+                </div>
+            </div>
+            <div class="button"> 
+                <input type="submit" value="Register">
+            </div>
+            {{#if error}}
+            <p>{{error}}</p>
+            {{/if}}
+        </form>
+    </div>
+</main>
